@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="icon" href="img/flowers.png" type="image/x-icon">
+  <title>Flowers</title>
+</head>
+
+<body>
+
+  <!-- Imagen de Luffy -->
+  <img src="img/Luffy-Hat-PNG-Photos.png" alt="Sombrero de Luffy" style="max-width:200px;">
+
+  <!-- Texto -->
+  <div class="description">
+    <span>sorry por tardar ❤️ tqm pelaita :)</span>
+  </div>
+
+  <!-- Botón cofre (en realidad un enlace con estilo de botón) -->
+  <a href="flower.html" class="chest-button" aria-label="Abrir cofre">
+    <svg class="chest-svg" viewBox="0 0 120 90" width="120" height="90" aria-hidden="true">
+      <!-- Base del cofre -->
+      <g class="chest-base">
+        <rect x="6" y="36" rx="6" ry="6" width="108" height="44" />
+        <rect x="14" y="44" rx="4" ry="4" width="92" height="28" class="panel" />
+        <!-- cerradura -->
+        <rect x="52" y="56" width="16" height="18" rx="3" ry="3" class="lock-body" />
+        <circle cx="60" cy="62" r="2" class="lock-hole" />
+      </g>
+
+      <!-- Tapa del cofre (se anima) -->
+      <g class="chest-lid" transform-origin="60 36">
+        <rect x="6" y="14" rx="6" ry="6" width="108" height="28" />
+        <rect x="14" y="18" rx="4" ry="4" width="92" height="16" class="panel" />
+        <path d="M10 16 L110 16" class="lid-line" />
+      </g>
+
+      <!-- Detalles de madera / remaches -->
+      <g class="chest-details">
+        <line x1="20" y1="46" x2="20" y2="66" />
+        <line x1="40" y1="46" x2="40" y2="66" />
+        <line x1="80" y1="46" x2="80" y2="66" />
+        <line x1="100" y1="46" x2="100" y2="66" />
+      </g>
+    </svg>
+
+    <span class="chest-label"></span>
+  </a>
+
+</body>
+
+</html>

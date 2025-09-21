@@ -1,0 +1,177 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,500;1,900&display=swap');
+*{
+    font-family: 'Poppins',cursive;
+}
+body{
+    color: azure;
+    width: 100%;
+    height: 82vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: black;
+    /* padding-top: -30; */
+}
+
+.botones{
+    padding: 9px;
+    border-radius: 80px;
+    background-color: transparent;
+    border: none;
+}
+
+.botones a{
+    background-color: #0a2be9;
+    padding: 9px;
+    border-radius: 80px;
+    -webkit-border-radius: 80px;
+    -moz-border-radius: 80px;
+    -ms-border-radius: 80px;
+    -o-border-radius: 80px;
+
+}
+
+.botones a:focus{
+    background-color: rgb(50, 194, 194);
+}
+
+.greetings{
+    font-size: 7rem;
+    font-weight: 900;
+}
+.greetings > span{
+    animation: glow 2.5s ease-in-out infinite;
+}
+@keyframes glow{
+    0%, 100%{
+        color: #fff;
+        text-shadow: 0 0 12px #39c6d6, 0 0 50px #39c6d6, 0 0 100px #39c6d6;
+    }
+    10%, 90%{
+        color: #111;
+        text-shadow: none;
+    }
+}
+.greetings > span:nth-child(2){
+    animation-delay: .2s ;
+}
+.greetings > span:nth-child(3){
+    animation-delay: .4s ;
+}
+.greetings > span:nth-child(4){
+    animation-delay: .6s;
+}
+.greetings > span:nth-child(5){
+    animation-delay: .8s;
+}
+.greetings > span:nth-child(6){
+    animation-delay: 1s;
+}
+
+.description{
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+}
+
+/* CONTENEDOR */
+.chest-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 8px 14px;
+  border-radius: 12px;
+  transition: transform 160ms ease, box-shadow 160ms ease;
+  outline: none;
+  user-select: none;
+  -webkit-tap-highlight-color: transparent;
+}
+
+/* SVG estilizado: madera y dorado */
+.chest-svg rect,
+.chest-svg path,
+.chest-svg line,
+.chest-svg circle {
+  fill: none;
+  stroke: rgba(0,0,0,0.6);
+  stroke-width: 1.3;
+  vector-effect: non-scaling-stroke;
+}
+
+/* Colores base */
+.chest-svg .chest-base rect:first-child { fill: #3d2a16; }     /* exterior oscuro */
+.chest-svg .chest-base .panel { fill: linear-gradient; }       /* placeholder - overwritten below */
+.chest-svg .chest-base .panel { fill: #9b6b2e; }               /* madera clara */
+.chest-svg .chest-lid rect:first-child { fill: #4a321a; }      /* tapa */
+.chest-svg .chest-lid .panel { fill: #ad7b3f; }                /* tapa interior */
+.chest-svg .lock-body { fill: #caa93f; }                       /* dorado cerradura */
+.chest-svg .lock-hole { fill: #5b4318; }                       /* agujero */
+
+/* detalles (líneas) */
+.chest-svg .chest-details line { stroke: rgba(0,0,0,0.45); stroke-width:1.6; }
+
+/* Etiqueta */
+.chest-label {
+  font-family: 'Poppins', system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+  font-weight: 700;
+  font-size: 14px;
+  color: #fff;
+  text-shadow: 0 1px 0 rgba(0,0,0,0.6);
+  letter-spacing: 0.4px;
+  pointer-events: none;
+}
+
+/* Hover / focus - animación de tapa (abre ligeramente) */
+.chest-button:hover,
+.chest-button:focus {
+  transform: translateY(-4px) scale(1.02);
+  box-shadow: 0 12px 30px rgba(0,0,0,0.45), 0 2px 8px rgba(0,0,0,0.3);
+}
+
+/* animación de abrir la tapa: rotar el grupo .chest-lid hacia atrás */
+.chest-button:hover .chest-lid,
+.chest-button:focus .chest-lid {
+  transform: rotateX(20deg) translateY(-4px);
+  transition: transform 260ms cubic-bezier(.2,.9,.3,1);
+}
+
+/* efecto "brillo" en la cerradura al pasar */
+.chest-button:hover .lock-body,
+.chest-button:focus .lock-body {
+  filter: drop-shadow(0 0 6px rgba(255,210,80,0.7));
+  transition: filter 220ms;
+}
+
+/* efecto al pulsar (active) */
+.chest-button:active {
+  transform: translateY(0) scale(0.99);
+  transition: transform 80ms;
+  box-shadow: 0 6px 14px rgba(0,0,0,0.35);
+}
+
+/* foco accesible */
+.chest-button:focus-visible {
+  outline: 3px solid rgba(255,200,70,0.18);
+  outline-offset: 4px;
+  border-radius: 12px;
+}
+
+
+@media screen and (max-width:574px){
+    .greetings{
+        display: block;
+        font-size: 4rem;
+        font-weight: 800;
+        text-align: center;
+    }
+    .description{
+        font-size: 2rem;
+    }
+    
+    .button a{
+        font-size: 1rem;
+    }
+}
